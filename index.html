@@ -3,381 +3,338 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Gourmet Kitchen | Delicious Food Made Fresh</title>
+    <title>Sri Vasavi Sarees | Timeless Elegance</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
         :root {
-            --deep-red: #8B0000;
-            --dark-brown: #3E2723;
-            --olive-green: #556B2F;
-            --cream-bg: #FFFDF9;
+            --ivory: #FCFBF7;
+            --maroon: #800000;
+            --royal-red: #A52A2A;
+            --gold: #D4AF37;
         }
         body {
             font-family: 'Inter', sans-serif;
-            background-color: var(--cream-bg);
-            color: var(--dark-brown);
+            background-color: var(--ivory);
+            color: #1A1A1A;
             scroll-behavior: smooth;
         }
-        .font-heading {
-            font-family: 'Poppins', sans-serif;
+        .font-serif {
+            font-family: 'Playfair Display', serif;
         }
-        .bg-deep-red { background-color: var(--deep-red); }
-        .text-deep-red { color: var(--deep-red); }
-        .bg-olive { background-color: var(--olive-green); }
-        .text-olive { color: var(--olive-green); }
-        .border-olive { border-color: var(--olive-green); }
+        .text-maroon { color: var(--maroon); }
+        .bg-maroon { background-color: var(--maroon); }
+        .border-gold { border-color: var(--gold); }
+        .text-gold { color: var(--gold); }
         
-        .nav-glass {
-            background: rgba(255, 253, 249, 0.95);
-            backdrop-filter: blur(10px);
-            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+        .nav-sticky {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
         }
 
-        .menu-tab-active {
-            background-color: var(--deep-red);
-            color: white;
+        .hover-lift {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .hover-lift:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
         }
 
-        .food-card:hover img {
-            transform: scale(1.05);
-        }
-
-        .custom-shadow {
-            box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.1);
+        .hero-gradient {
+            background: linear-gradient(rgba(252, 251, 247, 0.7), rgba(252, 251, 247, 0.7));
         }
     </style>
 </head>
 <body>
 
     <!-- Navbar -->
-    <nav class="fixed top-0 w-full z-50 nav-glass py-4 px-6 md:px-12 flex justify-between items-center">
-        <div class="text-2xl font-heading font-800 tracking-tighter text-deep-red flex items-center gap-2">
-            <i data-lucide="utensils-crosses" class="w-8 h-8"></i>
-            GOURMET KITCHEN
+    <nav class="nav-sticky w-full py-4 px-6 md:px-12 flex justify-between items-center">
+        <div class="text-2xl font-serif font-bold tracking-tight text-maroon">
+            SRI VASAVI SAREES
         </div>
         
-        <div class="hidden md:flex space-x-8 items-center text-sm font-semibold uppercase tracking-wider">
-            <a href="#home" class="hover:text-deep-red transition-colors">Home</a>
-            <a href="#menu" class="hover:text-deep-red transition-colors">Menu</a>
-            <a href="#specials" class="hover:text-deep-red transition-colors">Specials</a>
-            <a href="#contact" class="hover:text-deep-red transition-colors">Contact</a>
+        <div class="hidden md:flex space-x-8 items-center text-sm font-medium tracking-wide">
+            <a href="#home" class="hover:text-maroon transition-colors">HOME</a>
+            <a href="#collections" class="hover:text-maroon transition-colors">COLLECTIONS</a>
+            <a href="#about" class="hover:text-maroon transition-colors">ABOUT</a>
+            <a href="#contact" class="hover:text-maroon transition-colors">CONTACT</a>
         </div>
 
-        <div class="flex items-center gap-4">
-            <button class="bg-deep-red text-white px-5 py-2 rounded-full text-sm font-bold hover:opacity-90 transition-opacity">
-                ORDER ONLINE
-            </button>
-            <button class="md:hidden" id="mobileMenuBtn"><i data-lucide="menu" class="w-6 h-6"></i></button>
+        <div class="flex items-center space-x-4">
+            <button class="p-2"><i data-lucide="search" class="w-5 h-5"></i></button>
+            <button class="p-2 md:hidden" id="mobileMenuBtn"><i data-lucide="menu" class="w-6 h-6"></i></button>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="relative h-screen flex items-center justify-center overflow-hidden">
+    <section id="home" class="relative min-h-[85vh] flex items-center justify-center overflow-hidden bg-white">
         <div class="absolute inset-0 z-0">
             <img 
-                src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=2000" 
-                alt="Delicious Food" 
-                class="w-full h-full object-cover"
+                src="https://images.unsplash.com/photo-1610030482735-95e000c1756c?q=80&w=2000" 
+                alt="Saree Showroom" 
+                class="w-full h-full object-cover opacity-30"
             >
-            <div class="absolute inset-0 bg-black/50"></div>
         </div>
         
-        <div class="relative z-10 text-center px-6 max-w-4xl text-white">
-            <h1 class="font-heading text-5xl md:text-7xl font-800 mb-6 leading-tight">
-                Delicious Food Made <br> <span class="text-white opacity-90">Fresh Every Day</span>
+        <div class="relative z-10 text-center px-6 max-w-4xl">
+            <span class="text-gold font-medium tracking-[0.2em] uppercase text-sm mb-4 block">Crafting Traditions Since 1998</span>
+            <h1 class="font-serif text-5xl md:text-7xl text-maroon mb-6 leading-tight">
+                Timeless Sarees for <br> Every Occasion
             </h1>
-            <p class="text-lg md:text-xl mb-10 text-gray-200 max-w-2xl mx-auto font-light">
-                Dine in, takeaway, or order online with ease. Experience premium flavors crafted with love and fresh ingredients.
+            <p class="text-lg text-gray-700 mb-10 max-w-2xl mx-auto leading-relaxed">
+                Explore a curated collection of handpicked silk, cotton, and designer sarees that celebrate the essence of Indian womanhood.
             </p>
             <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="#menu" class="bg-deep-red text-white px-10 py-4 rounded-lg font-bold text-lg hover:scale-105 transition-transform">
-                    View Menu
+                <a href="#collections" class="bg-maroon text-white px-10 py-4 text-sm font-semibold tracking-widest hover:bg-black transition-all duration-300">
+                    VIEW COLLECTIONS
                 </a>
-                <a href="#contact" class="bg-white text-dark-brown px-10 py-4 rounded-lg font-bold text-lg hover:scale-105 transition-transform">
-                    Order Now
+                <a href="#contact" class="border border-maroon text-maroon px-10 py-4 text-sm font-semibold tracking-widest hover:bg-maroon hover:text-white transition-all duration-300">
+                    VISIT SHOWROOM
                 </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collections Section -->
+    <section id="collections" class="py-24 px-6 md:px-12 bg-[#FCFBF7]">
+        <div class="text-center mb-16">
+            <h2 class="font-serif text-4xl text-maroon mb-4">Our Signature Collections</h2>
+            <div class="w-24 h-px bg-gold mx-auto"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Silk -->
+            <div class="group relative overflow-hidden bg-white hover-lift">
+                <div class="aspect-[3/4] overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?q=80&w=800" alt="Silk Sarees" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                </div>
+                <div class="p-6 text-center">
+                    <h3 class="font-serif text-xl mb-2">Pure Silk Sarees</h3>
+                    <p class="text-xs text-gray-500 uppercase tracking-widest">Kanchipuram & Banarasi</p>
+                </div>
+            </div>
+
+            <!-- Cotton -->
+            <div class="group relative overflow-hidden bg-white hover-lift">
+                <div class="aspect-[3/4] overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1621112904887-419379ce6824?q=80&w=800" alt="Cotton Sarees" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                </div>
+                <div class="p-6 text-center">
+                    <h3 class="font-serif text-xl mb-2">Cotton Sarees</h3>
+                    <p class="text-xs text-gray-500 uppercase tracking-widest">Handloom & Comfort</p>
+                </div>
+            </div>
+
+            <!-- Bridal -->
+            <div class="group relative overflow-hidden bg-white hover-lift">
+                <div class="aspect-[3/4] overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=800" alt="Bridal Sarees" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                </div>
+                <div class="p-6 text-center">
+                    <h3 class="font-serif text-xl mb-2">Bridal Edit</h3>
+                    <p class="text-xs text-gray-500 uppercase tracking-widest">Wedding Specials</p>
+                </div>
+            </div>
+
+            <!-- Designer -->
+            <div class="group relative overflow-hidden bg-white hover-lift">
+                <div class="aspect-[3/4] overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1574175308103-62589f2f8193?q=80&w=800" alt="Designer Sarees" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                </div>
+                <div class="p-6 text-center">
+                    <h3 class="font-serif text-xl mb-2">Designer Wear</h3>
+                    <p class="text-xs text-gray-500 uppercase tracking-widest">Modern Silhouettes</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Section -->
+    <section class="py-20 bg-white">
+        <div class="px-6 md:px-12 flex flex-col md:flex-row items-center gap-12">
+            <div class="w-full md:w-1/2">
+                <img src="https://images.unsplash.com/photo-1610030482081-3046f40772f4?q=80&w=1000" alt="Fabric Detail" class="w-full h-[600px] object-cover shadow-2xl">
+            </div>
+            <div class="w-full md:w-1/2 space-y-6">
+                <h2 class="font-serif text-4xl text-maroon">The Art of Fine Weaving</h2>
+                <p class="text-gray-600 leading-relaxed text-lg">
+                    Every saree at Sri Vasavi is a masterpiece. We work directly with weavers from across India to ensure the texture, zari, and fall of our fabrics are of the highest quality.
+                </p>
+                <div class="grid grid-cols-2 gap-8 pt-6">
+                    <div>
+                        <h4 class="font-serif text-2xl text-gold">10,000+</h4>
+                        <p class="text-sm text-gray-500 uppercase">Happy Brides</p>
+                    </div>
+                    <div>
+                        <h4 class="font-serif text-2xl text-gold">25 Years</h4>
+                        <p class="text-sm text-gray-500 uppercase">Of Excellence</p>
+                    </div>
+                </div>
+                <button class="mt-8 bg-maroon text-white px-8 py-3 text-sm font-semibold tracking-widest">LEARN OUR STORY</button>
             </div>
         </div>
     </section>
 
     <!-- Why Choose Us -->
-    <section class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div class="text-center p-6 space-y-4">
-                <div class="inline-flex items-center justify-center w-16 h-16 bg-red-50 text-deep-red rounded-full">
-                    <i data-lucide="leaf" class="w-8 h-8"></i>
-                </div>
-                <h3 class="font-heading text-xl">Fresh Ingredients</h3>
-                <p class="text-sm text-gray-500">Sourced daily from local organic farms for the best taste.</p>
-            </div>
-            <div class="text-center p-6 space-y-4">
-                <div class="inline-flex items-center justify-center w-16 h-16 bg-olive/10 text-olive rounded-full">
-                    <i data-lucide="shield-check" class="w-8 h-8"></i>
-                </div>
-                <h3 class="font-heading text-xl">Hygienic Kitchen</h3>
-                <p class="text-sm text-gray-500">We maintain the highest standards of cleanliness and safety.</p>
-            </div>
-            <div class="text-center p-6 space-y-4">
-                <div class="inline-flex items-center justify-center w-16 h-16 bg-yellow-50 text-yellow-700 rounded-full">
-                    <i data-lucide="zap" class="w-8 h-8"></i>
-                </div>
-                <h3 class="font-heading text-xl">Quick Service</h3>
-                <p class="text-sm text-gray-500">Fast preparation without compromising on quality.</p>
-            </div>
-            <div class="text-center p-6 space-y-4">
-                <div class="inline-flex items-center justify-center w-16 h-16 bg-blue-50 text-blue-700 rounded-full">
-                    <i data-lucide="wallet" class="w-8 h-8"></i>
-                </div>
-                <h3 class="font-heading text-xl">Affordable Prices</h3>
-                <p class="text-sm text-gray-500">Premium dining experience that doesn't break the bank.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Menu Section -->
-    <section id="menu" class="py-24 px-6 md:px-12 bg-[#FFFDF9]">
-        <div class="text-center mb-12">
-            <span class="text-olive font-bold tracking-widest text-sm uppercase">Taste the Excellence</span>
-            <h2 class="font-heading text-4xl md:text-5xl mt-2 mb-4">Our Delicious Menu</h2>
-            <div class="w-20 h-1 bg-deep-red mx-auto"></div>
-        </div>
-
-        <!-- Menu Tabs -->
-        <div class="flex flex-wrap justify-center gap-2 md:gap-4 mb-12">
-            <button onclick="filterMenu('starters')" class="menu-tab px-8 py-3 rounded-full font-bold border-2 border-transparent transition-all menu-tab-active" data-category="starters">Starters</button>
-            <button onclick="filterMenu('main')" class="menu-tab px-8 py-3 rounded-full font-bold border-2 border-transparent transition-all bg-white shadow-sm" data-category="main">Main Course</button>
-            <button onclick="filterMenu('desserts')" class="menu-tab px-8 py-3 rounded-full font-bold border-2 border-transparent transition-all bg-white shadow-sm" data-category="desserts">Desserts</button>
-            <button onclick="filterMenu('beverages')" class="menu-tab px-8 py-3 rounded-full font-bold border-2 border-transparent transition-all bg-white shadow-sm" data-category="beverages">Beverages</button>
-        </div>
-
-        <!-- Menu Grid -->
-        <div id="menuGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            <!-- Items injected via JS -->
-        </div>
-    </section>
-
-    <!-- Special Dishes -->
-    <section id="specials" class="py-24 bg-white">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-4">
-                <div>
-                    <h2 class="font-heading text-4xl text-dark-brown">Today's Specials</h2>
-                    <p class="text-gray-500 mt-2">Highly recommended by our Head Chef</p>
-                </div>
-                <a href="#menu" class="text-deep-red font-bold flex items-center gap-2 group">
-                    View full menu <i data-lucide="arrow-right" class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
-                </a>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="group relative rounded-2xl overflow-hidden custom-shadow">
-                    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?q=80&w=800" alt="Special 1" class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-6">
-                        <span class="text-white bg-olive px-3 py-1 rounded text-xs font-bold w-fit mb-2">MOST POPULAR</span>
-                        <h3 class="text-white font-heading text-2xl">Signature Pepperoni Pizza</h3>
-                        <p class="text-gray-300 text-sm mt-1">Hand-tossed crust with spicy pepperoni.</p>
-                    </div>
-                </div>
-                <div class="group relative rounded-2xl overflow-hidden custom-shadow">
-                    <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=800" alt="Special 2" class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-6">
-                        <span class="text-white bg-deep-red px-3 py-1 rounded text-xs font-bold w-fit mb-2">NEW ARRIVAL</span>
-                        <h3 class="text-white font-heading text-2xl">Exotic Garden Salad</h3>
-                        <p class="text-gray-300 text-sm mt-1">Fresh greens with balsamic glaze.</p>
-                    </div>
-                </div>
-                <div class="group relative rounded-2xl overflow-hidden custom-shadow">
-                    <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7bb7445?q=80&w=800" alt="Special 3" class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-6">
-                        <span class="text-white bg-yellow-600 px-3 py-1 rounded text-xs font-bold w-fit mb-2">BEST SELLER</span>
-                        <h3 class="text-white font-heading text-2xl">Fluffy Honey Pancakes</h3>
-                        <p class="text-gray-300 text-sm mt-1">Served with maple syrup and berries.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Reviews -->
     <section class="py-24 bg-[#FAF8F5]">
-        <div class="max-w-6xl mx-auto px-6">
-            <h2 class="font-heading text-center text-4xl mb-16">What Our Guests Say</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-white p-8 rounded-2xl custom-shadow space-y-4">
-                    <div class="flex text-yellow-400"><i data-lucide="star" class="fill-current w-4 h-4"></i><i data-lucide="star" class="fill-current w-4 h-4"></i><i data-lucide="star" class="fill-current w-4 h-4"></i><i data-lucide="star" class="fill-current w-4 h-4"></i><i data-lucide="star" class="fill-current w-4 h-4"></i></div>
-                    <p class="text-gray-600 italic">"The best burger I've had in years! The meat was juicy and the ingredients were clearly very fresh. Highly recommended."</p>
-                    <div class="flex items-center gap-4 pt-4 border-t">
-                        <div class="w-10 h-10 rounded-full bg-deep-red flex items-center justify-center text-white font-bold">RK</div>
-                        <div>
-                            <h4 class="font-bold text-sm">Rahul Khanna</h4>
-                            <p class="text-xs text-gray-400">Regular Customer</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-white p-8 rounded-2xl custom-shadow space-y-4">
-                    <div class="flex text-yellow-400"><i data-lucide="star" class="fill-current w-4 h-4"></i><i data-lucide="star" class="fill-current w-4 h-4"></i><i data-lucide="star" class="fill-current w-4 h-4"></i><i data-lucide="star" class="fill-current w-4 h-4"></i><i data-lucide="star" class="fill-current w-4 h-4"></i></div>
-                    <p class="text-gray-600 italic">"Amazing ambiance and even better food. The pasta was cooked perfectly al dente. Will be coming back with family soon!"</p>
-                    <div class="flex items-center gap-4 pt-4 border-t">
-                        <div class="w-10 h-10 rounded-full bg-olive flex items-center justify-center text-white font-bold">SM</div>
-                        <div>
-                            <h4 class="font-bold text-sm">Sneha Murthy</h4>
-                            <p class="text-xs text-gray-400">Food Blogger</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-white p-8 rounded-2xl custom-shadow space-y-4">
-                    <div class="flex text-yellow-400"><i data-lucide="star" class="fill-current w-4 h-4"></i><i data-lucide="star" class="fill-current w-4 h-4"></i><i data-lucide="star" class="fill-current w-4 h-4"></i><i data-lucide="star" class="fill-current w-4 h-4"></i><i data-lucide="star" class="fill-current w-4 h-4"></i></div>
-                    <p class="text-gray-600 italic">"I usually order takeaway and the food always arrives hot and beautifully packaged. The brownie is to die for!"</p>
-                    <div class="flex items-center gap-4 pt-4 border-t">
-                        <div class="w-10 h-10 rounded-full bg-yellow-600 flex items-center justify-center text-white font-bold">AD</div>
-                        <div>
-                            <h4 class="font-bold text-sm">Arjun Das</h4>
-                            <p class="text-xs text-gray-400">Local Resident</p>
-                        </div>
-                    </div>
-                </div>
+        <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12 text-center">
+            <div class="space-y-4">
+                <div class="flex justify-center text-gold"><i data-lucide="award" class="w-10 h-10"></i></div>
+                <h3 class="font-serif text-lg">Premium Quality</h3>
+                <p class="text-sm text-gray-500">Authentic materials sourced from master weavers.</p>
+            </div>
+            <div class="space-y-4">
+                <div class="flex justify-center text-gold"><i data-lucide="shield-check" class="w-10 h-10"></i></div>
+                <h3 class="font-serif text-lg">Trusted Legacy</h3>
+                <p class="text-sm text-gray-500">Serving families with honesty since 1998.</p>
+            </div>
+            <div class="space-y-4">
+                <div class="flex justify-center text-gold"><i data-lucide="sparkles" class="w-10 h-10"></i></div>
+                <h3 class="font-serif text-lg">Handpicked Designs</h3>
+                <p class="text-sm text-gray-500">Unique patterns you won't find anywhere else.</p>
+            </div>
+            <div class="space-y-4">
+                <div class="flex justify-center text-gold"><i data-lucide="tag" class="w-10 h-10"></i></div>
+                <h3 class="font-serif text-lg">Affordable Luxury</h3>
+                <p class="text-sm text-gray-500">Fair pricing for exquisite craftsmanship.</p>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-24 px-6 md:px-12">
-        <div class="max-w-7xl mx-auto bg-dark-brown rounded-3xl overflow-hidden flex flex-col md:flex-row text-white">
-            <div class="p-12 md:w-1/2 space-y-8">
-                <h2 class="font-heading text-4xl">Visit Us or <br> Order Online</h2>
-                <div class="space-y-6">
-                    <div class="flex gap-4">
-                        <div class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center text-deep-red"><i data-lucide="map-pin"></i></div>
-                        <div>
-                            <h4 class="font-bold">Location</h4>
-                            <p class="text-gray-400">45 Foodie Lane, Gourmet Street, New Delhi - 110001</p>
-                        </div>
-                    </div>
-                    <div class="flex gap-4">
-                        <div class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center text-olive"><i data-lucide="phone"></i></div>
-                        <div>
-                            <h4 class="font-bold">Contact</h4>
-                            <p class="text-gray-400">+91 98765 43210 <br> info@gourmetkitchen.com</p>
-                        </div>
-                    </div>
-                    <div class="flex gap-4">
-                        <div class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center text-yellow-500"><i data-lucide="clock"></i></div>
-                        <div>
-                            <h4 class="font-bold">Opening Hours</h4>
-                            <p class="text-gray-400">Mon - Sun: 11:00 AM - 11:00 PM</p>
-                        </div>
+    <!-- Testimonials -->
+    <section class="py-24 px-6 md:px-12 bg-white">
+        <div class="text-center mb-16">
+            <h2 class="font-serif text-4xl text-maroon mb-4">Words from our Patrons</h2>
+            <div class="w-24 h-px bg-gold mx-auto"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="p-8 bg-[#FCFBF7] text-center space-y-4 italic">
+                <div class="flex justify-center mb-4">
+                    <div class="w-16 h-16 rounded-full overflow-hidden border-2 border-gold">
+                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=200" alt="Customer" class="w-full h-full object-cover">
                     </div>
                 </div>
-                <div class="pt-4 flex flex-wrap gap-4">
-                    <button class="bg-deep-red text-white px-8 py-4 rounded-xl font-bold flex items-center gap-3 hover:scale-105 transition-transform">
-                        <i data-lucide="shopping-bag"></i> ORDER NOW
-                    </button>
-                    <button class="bg-[#25D366] text-white px-8 py-4 rounded-xl font-bold flex items-center gap-3 hover:scale-105 transition-transform">
-                        <i data-lucide="message-circle"></i> WHATSAPP ORDER
+                <p class="text-gray-700 leading-relaxed text-sm">"The bridal collection at Sri Vasavi is beyond words. I found my dream wedding Kanchipuram silk here, and the service was so personalized."</p>
+                <h4 class="font-serif text-maroon not-italic font-bold">— Anjali Reddy</h4>
+            </div>
+
+            <div class="p-8 bg-[#FCFBF7] text-center space-y-4 italic">
+                <div class="flex justify-center mb-4">
+                    <div class="w-16 h-16 rounded-full overflow-hidden border-2 border-gold">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=200" alt="Customer" class="w-full h-full object-cover">
+                    </div>
+                </div>
+                <p class="text-gray-700 leading-relaxed text-sm">"I've been buying cotton sarees here for years. The quality is consistent, and the designs are always fresh yet traditional."</p>
+                <h4 class="font-serif text-maroon not-italic font-bold">— Priya Sharma</h4>
+            </div>
+
+            <div class="p-8 bg-[#FCFBF7] text-center space-y-4 italic">
+                <div class="flex justify-center mb-4">
+                    <div class="w-16 h-16 rounded-full overflow-hidden border-2 border-gold">
+                        <img src="https://images.unsplash.com/photo-1531123897727-8f129e16fd3c?q=80&w=200" alt="Customer" class="w-full h-full object-cover">
+                    </div>
+                </div>
+                <p class="text-gray-700 leading-relaxed text-sm">"The best place for premium silk. Their collection of designer sarees is perfect for party wear. Truly a luxury experience."</p>
+                <h4 class="font-serif text-maroon not-italic font-bold">— Meenakshi Iyer</h4>
+            </div>
+        </div>
+    </section>
+
+    <!-- Visit Section -->
+    <section id="contact" class="py-24 px-6 md:px-12 bg-maroon text-white">
+        <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12">
+            <div class="space-y-6 text-center md:text-left">
+                <h2 class="font-serif text-5xl">Experience our <br> Grand Showroom</h2>
+                <div class="space-y-4 text-gray-300">
+                    <p class="flex items-center justify-center md:justify-start gap-3">
+                        <i data-lucide="map-pin" class="w-5 h-5 text-gold"></i>
+                        12-4-118, MG Road, Hyderabad, Telangana - 500003
+                    </p>
+                    <p class="flex items-center justify-center md:justify-start gap-3">
+                        <i data-lucide="phone" class="w-5 h-5 text-gold"></i>
+                        +91 98765 43210 / 040-2345678
+                    </p>
+                </div>
+                <div class="pt-4">
+                    <button class="bg-gold text-maroon font-bold px-10 py-4 tracking-widest hover:bg-white transition-all">
+                        VISIT OUR SHOWROOM
                     </button>
                 </div>
             </div>
-            <div class="md:w-1/2 min-h-[400px]">
-                <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1000" alt="Restaurant Interior" class="w-full h-full object-cover">
+            <div class="w-full md:w-1/3 bg-white p-1 rounded-sm shadow-xl">
+                <!-- Placeholder for map -->
+                <div class="bg-gray-100 aspect-square flex items-center justify-center text-gray-400">
+                    <i data-lucide="map" class="w-12 h-12"></i>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="py-12 border-t border-gray-100 bg-white px-6 md:px-12">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+    <footer class="py-12 px-6 md:px-12 border-t border-gray-100 bg-white">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-8">
             <div class="text-center md:text-left">
-                <div class="text-2xl font-heading font-800 text-deep-red mb-2">GOURMET KITCHEN</div>
-                <p class="text-sm text-gray-500 max-w-xs">Elevating your dining experience with fresh flavors and traditional hospitality since 2010.</p>
+                <div class="text-2xl font-serif font-bold text-maroon mb-2">SRI VASAVI SAREES</div>
+                <p class="text-sm text-gray-500 max-w-xs">Preserving the heritage of Indian weaving through exquisite sarees since 1998.</p>
             </div>
             
             <div class="flex space-x-6">
-                <a href="#" class="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-gray-500 hover:text-deep-red hover:border-deep-red transition-all"><i data-lucide="instagram" class="w-5 h-5"></i></a>
-                <a href="#" class="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-gray-500 hover:text-deep-red hover:border-deep-red transition-all"><i data-lucide="facebook" class="w-5 h-5"></i></a>
-                <a href="#" class="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-gray-500 hover:text-deep-red hover:border-deep-red transition-all"><i data-lucide="twitter" class="w-5 h-5"></i></a>
+                <a href="#" class="text-gray-400 hover:text-maroon transition-colors"><i data-lucide="instagram" class="w-6 h-6"></i></a>
+                <a href="#" class="text-gray-400 hover:text-maroon transition-colors"><i data-lucide="facebook" class="w-6 h-6"></i></a>
+                <a href="#" class="text-gray-400 hover:text-maroon transition-colors"><i data-lucide="message-circle" class="w-6 h-6"></i></a>
             </div>
         </div>
         
-        <div class="max-w-7xl mx-auto mt-12 pt-8 border-t border-gray-50 text-center text-xs text-gray-400 tracking-widest flex flex-col md:flex-row justify-between items-center gap-4">
-            <p>&copy; 2024 THE GOURMET KITCHEN. ALL RIGHTS RESERVED.</p>
-            <div class="flex space-x-4">
-                <a href="#" class="hover:text-deep-red">Privacy Policy</a>
-                <a href="#" class="hover:text-deep-red">Terms of Service</a>
-            </div>
+        <div class="mt-12 pt-8 border-t border-gray-50 text-center text-xs text-gray-400 tracking-widest">
+            &copy; 2024 SRI VASAVI SAREES. ALL RIGHTS RESERVED.
         </div>
     </footer>
+
+    <!-- Mobile Menu Overlay (Hidden) -->
+    <div id="mobileMenu" class="fixed inset-0 bg-white z-[100] transform translate-x-full transition-transform duration-300 flex flex-col p-8">
+        <div class="flex justify-end">
+            <button id="closeMenuBtn" class="p-2"><i data-lucide="x" class="w-8 h-8"></i></button>
+        </div>
+        <div class="flex flex-col items-center justify-center flex-grow space-y-8 text-2xl font-serif">
+            <a href="#home" class="mobile-link">HOME</a>
+            <a href="#collections" class="mobile-link">COLLECTIONS</a>
+            <a href="#about" class="mobile-link">ABOUT</a>
+            <a href="#contact" class="mobile-link">CONTACT</a>
+        </div>
+    </div>
 
     <script>
         // Initialize Icons
         lucide.createIcons();
 
-        // Menu Data
-        const menuItems = [
-            { id: 1, category: 'starters', name: 'Crispy Calamari', price: '₹450', desc: 'Lightly battered and fried tender calamari with lemon aioli.' },
-            { id: 2, category: 'starters', name: 'Bruschetta Pomodoro', price: '₹320', desc: 'Toasted baguette with tomato, basil, and balsamic.' },
-            { id: 3, category: 'starters', name: 'Chicken Wings', price: '₹480', desc: 'Choice of Honey BBQ or Spicy Buffalo sauce.' },
-            { id: 4, category: 'main', name: 'Truffle Mushroom Pasta', price: '₹750', desc: 'Creamy fettuccine with seasonal mushrooms and truffle oil.' },
-            { id: 5, category: 'main', name: 'Grilled Salmon', price: '₹1,200', desc: 'Atlantic salmon served with asparagus and lemon butter.' },
-            { id: 6, category: 'main', name: 'Classic Beef Burger', price: '₹650', desc: 'Angus beef patty, cheddar, lettuce, and secret sauce.' },
-            { id: 7, category: 'desserts', name: 'Warm Lava Cake', price: '₹380', desc: 'Decadent chocolate cake with a molten center.' },
-            { id: 8, category: 'desserts', name: 'Classic Tiramisu', price: '₹420', desc: 'Espresso-soaked ladyfingers with mascarpone cream.' },
-            { id: 9, category: 'beverages', name: 'Fresh Fruit Mojito', price: '₹280', desc: 'Refreshing blend of mint, lime, and seasonal fruit.' },
-            { id: 10, category: 'beverages', name: 'Cold Brew Coffee', price: '₹220', desc: 'Smooth 18-hour steep cold brew served over ice.' }
-        ];
+        // Mobile Menu Logic
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const closeMenuBtn = document.getElementById('closeMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
 
-        function renderMenu(category) {
-            const grid = document.getElementById('menuGrid');
-            const items = menuItems.filter(item => item.category === category);
-            
-            grid.innerHTML = items.map(item => `
-                <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-                    <div class="flex justify-between items-start mb-2">
-                        <h3 class="font-heading text-lg text-dark-brown">${item.name}</h3>
-                        <span class="text-deep-red font-bold">${item.price}</span>
-                    </div>
-                    <p class="text-sm text-gray-500 mb-4">${item.desc}</p>
-                    <button class="text-xs font-bold text-olive uppercase tracking-widest flex items-center gap-1 hover:text-deep-red transition-colors">
-                        Add to Order <i data-lucide="plus" class="w-3 h-3"></i>
-                    </button>
-                </div>
-            `).join('');
-            
-            lucide.createIcons();
-        }
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.remove('translate-x-full');
+        });
 
-        function filterMenu(category) {
-            // Update active state
-            document.querySelectorAll('.menu-tab').forEach(btn => {
-                if(btn.dataset.category === category) {
-                    btn.classList.add('menu-tab-active');
-                    btn.classList.remove('bg-white', 'shadow-sm');
-                } else {
-                    btn.classList.remove('menu-tab-active');
-                    btn.classList.add('bg-white', 'shadow-sm');
-                }
-            });
-            
-            renderMenu(category);
-        }
-
-        // Initialize with starters
-        renderMenu('starters');
-
-        // Simple Mobile Menu Toggle
-        const mobileBtn = document.getElementById('mobileMenuBtn');
-        mobileBtn.onclick = () => {
-            // In a real app, this would open a side drawer
-            console.log('Mobile menu clicked');
+        const closeMenu = () => {
+            mobileMenu.classList.add('translate-x-full');
         };
 
-        // Header scroll effect
+        closeMenuBtn.addEventListener('click', closeMenu);
+        mobileLinks.forEach(link => link.addEventListener('click', closeMenu));
+
+        // Subtle Scroll Header Effect
         window.addEventListener('scroll', () => {
             const nav = document.querySelector('nav');
-            if (window.scrollY > 20) {
+            if (window.scrollY > 50) {
                 nav.classList.add('py-2');
                 nav.classList.remove('py-4');
             } else {
@@ -388,4 +345,5 @@
     </script>
 </body>
 </html>
+
 
